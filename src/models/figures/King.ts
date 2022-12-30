@@ -1,8 +1,9 @@
-import {Figure, FigureNames} from "../../../../../Desktop/react-chess-master/src/models/figures/Figure";
-import {Colors} from "../../../../../Desktop/react-chess-master/src/models/Colors";
-import {Cell} from "../../../../../Desktop/react-chess-master/src/models/Cell";
+
 import blackLogo from "../../assets/black-king.png";
 import whiteLogo from "../../assets/white-king.png";
+import {Figure, FigureNames} from "./Figure";
+import {Cell} from "../Cell";
+import {Colors} from "../Colors";
 
 export class King extends Figure {
   constructor(color: Colors, cell: Cell) {
