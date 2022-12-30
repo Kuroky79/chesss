@@ -9,8 +9,10 @@ interface CellProps{
 
 const CellComponent: FC<CellProps> = ({cell,selected,click}) => {
     return (
-        <div className={['cell', cell.color, selected ? 'selected' : ''].join(' ')} onClick={()=>click(cell)}>
+        <div className={['cell', cell.color, selected ? 'selected' : ''].join(' ')} onClick={()=>click(cell)} style={{background: cell.avilible && cell.figure ? 'green' : ''}}>
+            {cell.avilible && !cell.figure && <div className="available"/>}
             {cell.figure?.logo && <img alt="" src={cell.figure.logo}/>}
+
         </div>
     );
 };

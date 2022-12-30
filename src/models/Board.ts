@@ -29,6 +29,21 @@ export class Board{
         return this.cells[y][x]
     }
 
+
+
+
+    public highlightCells(selectedcCell: Cell | null){
+        for (let i=0; i< this.cells.length; i++){
+            const row = this.cells[i]
+            for (let j=0; j< this.cells.length; j++) {
+                const target = row[j];
+                target.avilible = !!selectedcCell?.figure?.canMove(target)
+            }
+        }
+    }
+
+
+
     private addPawns(){
         for(let i=0;i<8;i++){
             new Pawn(Colors.BLACK, this.getCell(i,1))
@@ -73,5 +88,11 @@ export class Board{
         this.addQueens()
         this.addKnights()
         this.addRooks()
+    }
+
+    getCopyBoard(): Board {
+        const newBoard = new Board();
+        newBoard.cells = this.cells;
+        return newBoard;
     }
 }
