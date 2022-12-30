@@ -1,8 +1,9 @@
-import {Figure, FigureNames} from "../../../../../Desktop/react-chess-master/src/models/figures/Figure";
-import {Colors} from "../../../../../Desktop/react-chess-master/src/models/Colors";
-import {Cell} from "../../../../../Desktop/react-chess-master/src/models/Cell";
+
 import blackLogo from "../../assets/black-rook.png";
 import whiteLogo from "../../assets/white-rook.png";
+import {Figure, FigureNames} from "./Figure";
+import {Cell} from "../Cell";
+import {Colors} from "../Colors";
 
 export class Rook extends Figure {
   constructor(color: Colors, cell: Cell) {
@@ -11,13 +12,13 @@ export class Rook extends Figure {
     this.name = FigureNames.ROOK;
   }
 
-  canMove(target: Cell): boolean {
-    if(!super.canMove(target))
-      return false;
-    if(this.cell.isEmptyVertical(target))
-      return true
-    if(this.cell.isEmptyHorizontal(target))
-      return true
-    return false
-  }
+  // canMove(target: Cell): boolean {
+  //   if(!super.canMove(target))
+  //     return false;
+  //   if(this.cell.isEmptyVertical(target))
+  //     return true
+  //   if(this.cell.isEmptyHorizontal(target))
+  //     return true
+  //   return false
+  // }
 }
