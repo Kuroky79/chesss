@@ -45,3 +45,21 @@
   background-color: green;
 }
 
+.bar{
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+.lost {
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background-color: lightgray;
+}
+.button{
+  background-color: green;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+
