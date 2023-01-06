@@ -32,12 +32,12 @@ export class Board{
 
 
 
-    public highlightCells(selectedcCell: Cell | null){
-        for (let i=0; i< this.cells.length; i++){
-            const row = this.cells[i]
-            for (let j=0; j< this.cells.length; j++) {
+    public highlightCells(selectedCell: Cell | null) {
+        for (let i = 0; i < this.cells.length; i++) {
+            const row = this.cells[i];
+            for (let j = 0; j < row.length; j++) {
                 const target = row[j];
-                target.avilible = !!selectedcCell?.figure?.canMove(target)
+                target.available = !!selectedCell?.figure?.canMove(target)
             }
         }
     }
